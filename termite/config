@@ -2,6 +2,10 @@
 foreground = #dcdccc
 background  = #2F3138
 
+# Red
+color1 = #ff5000
+color9 = #ff5000
+
 # Blue
 color4 = #5168a3
 color12 = #5168a3 
