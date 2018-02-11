@@ -38,7 +38,7 @@ font-3 = FontAwesome:size=12;0
 
 modules-left = i3
 modules-center = volume
-modules-right = wlan eth date
+modules-right = github wlan eth date
 
 ;tray-position = right
 :tray-padding = 2
@@ -291,3 +291,25 @@ margin-top = 5
 margin-bottom = 5
 
 ; vim:ft=dosini
+
+[module/github]
+type = internal/github
+
+; Accessing an access token stored in file
+token = ${file:~/.config/polybar/github.token}
+
+; Whether empty notifications should be displayed or not
+empty-notifications = true
+
+; Number of seconds in between requests
+interval = 60
+
+; Available tags:
+;   <label> (default)
+format =  <label>
+
+; Available tokens:
+;   %notifications% (default)
+; Default: Notifications: %notifications%
+label = %notifications%
+;label-foreground = ${colors.foreground-alt}
