@@ -1,0 +1,12 @@
+[user]
+	name = J√r√my Merle
+	email = jeremy.merle@protonmail.com
+[push]
+	default = simple
+[alias]
+	st = status -s
+	reha = reset --hard
+	aa = add .
+	com = commit -m
+	follow = log --pretty='%Cred%h %Cgreen%cd %Creset%B' --date='short' --follow
+	lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
