@@ -1,0 +1,10 @@
+#!/bin/bash
+
+selection=$(echo -e "Eteindre\nRedemarrer\nAnnuler" | dmenu -i -p "Que faire ?")
+
+case "$selection" in
+	Eteindre) shutdown now;;
+	Redemarrer) shutdown -r now;;
+	Annuler) exit;;
+esac
+
