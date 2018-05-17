@@ -167,9 +167,10 @@ exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
 # Transparancy
 exec_always --no-startup-id xcompmgr -c -f -n 
+exec_always --no-startup-id numlockx
 
 # Shortcuts
-bindsym --release $mod+x exec --no-startup-id import $HOME/Images/screen.png
+bindsym --release $mod+x exec --no-startup-id import $HOME/Images/screen_$(date +%Y-%m-%d_%H:%M).png
 bindsym $mod+w exec i3lock -i Images/lockscreen.png -c 000000
 # Pulse Audio controls
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
@@ -189,7 +190,19 @@ bindsym XF86AudioPause exec playerctl pause
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 
+bindsym $mod+t exec --no-startup-id telegram-desktop; [instance="telegram-desktop"] scratchpad show;
+bindsym $mod+Shift+s exec "~/.script/power_manager"
+bindsym $mod+Shift+f exec --no-startup-id firefox
+
 # Gaps
 gaps inner 12
 smart_gaps on
 #######################################
+#
+for_window [instance="telegram-desktop"] floating enable
+for_window [instance="telegram-desktop"] resize set 300 730
+for_window [instance="telegram-desktop"] move position 980 32
+for_window [instance="telegram-desktop"] move scratchpad
+for_window [instance="telegram-desktop"] sticky enable
+for_window [instance="telegram-desktop"] border none
+
