@@ -97,3 +97,10 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+#
+alias launch_maria="sudo systemctl start mariadb"
+alias launch_postgres="sudo systemctl start postgresql"
+
+function wiki() {
+  firefox --search "\!aw $1"
+}
