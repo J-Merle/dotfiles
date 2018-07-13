@@ -180,7 +180,7 @@ bindsym XF86AudioPause exec playerctl pause
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 
-bindsym $mod+t exec --no-startup-id telegram-desktop; [instance="telegram-desktop"] scratchpad show;
+bindsym $mod+t exec --no-startup-id telegram-desktop; [class="TelegramDesktop"] scratchpad show;
 bindsym $mod+a [window_role="termite-float"] scratchpad show;
 exec --no-startup-id "termite -r termite-float"
 bindsym $mod+Shift+d exec "~/.script/ide_manager"
@@ -200,10 +200,13 @@ for_window [window_role="termite-float"] border none
 for_window [window_role="termite-float"] sticky enable
 for_window [window_role="termite-float"] move scratchpad
 
-for_window [instance="telegram-desktop"] floating enable
-for_window [instance="telegram-desktop"] resize set 300 730
-for_window [instance="telegram-desktop"] move position 980 32
-for_window [instance="telegram-desktop"] move scratchpad
-for_window [instance="telegram-desktop"] sticky enable
-for_window [instance="telegram-desktop"] border none
+for_window [class="TelegramDesktop"] floating enable
+for_window [class="TelegramDesktop"] resize set 300 730
+for_window [class="TelegramDesktop"] move position 980 32
+for_window [class="TelegramDesktop"] move scratchpad
+for_window [class="TelegramDesktop"] sticky enable
+for_window [class="TelegramDesktop"] border none
 
+
+for_window [window_role="GtkFileChooserDialog"] resize set 800 600
+for_window [window_role="GtkFileChooserDialog"] move center
