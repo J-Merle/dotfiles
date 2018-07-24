@@ -1,0 +1,5 @@
+termite
+zsh
+polybar
+feh
+telegram-desktop
