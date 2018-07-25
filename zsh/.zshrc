@@ -107,3 +107,7 @@ alias aurman="aurman --color always"
 function wiki() {
   firefox --search "\!aw $1"
 }
+
+function wallpaper() {
+  ln -sf "$(readlink -f $1)" "$HOME/.config/i3/wallpaper" && feh --bg-fill "$HOME/.config/i3/wallpaper"
+}

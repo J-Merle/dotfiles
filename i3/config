@@ -2,7 +2,7 @@
 # Launcher polybar
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 # Wallpaper
-exec_always --no-startup-id feh --bg-fill $HOME/.config/i3/wallpaper.jpg 
+exec_always --no-startup-id feh --bg-fill $HOME/.config/i3/wallpaper 
 # Lock screen
 exec_always --no-startup-id betterlockscreen --update ~/Images/lock.png -r 1920x1080
 # Transparancy
