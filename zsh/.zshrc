@@ -100,6 +100,9 @@ source $ZSH/oh-my-zsh.sh
 #
 alias launch_maria="sudo systemctl start mariadb"
 alias launch_postgres="sudo systemctl start postgresql"
+alias lll="ls -lah"
+alias pacman="pacman --color always"
+alias aurman="aurman --color always"
 
 function wiki() {
   firefox --search "\!aw $1"
