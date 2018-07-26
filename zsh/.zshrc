@@ -115,3 +115,7 @@ function wallpaper() {
 function lockscreen() {
   ln -sf "$(readlink -f $1)" "$HOME/.config/i3/lockscreen" && betterlockscreen --update "$HOME/.config/i3/lockscreen" -r 1920x1080
 }
+
+function spell() {
+  echo $1 > /tmp/spell_check.txt && aspell -c /tmp/spell_check.txt && echo "Texte sauvegardé dans /tmp/spell_check.txt" && cat /tmp/spell_check.txt
+}

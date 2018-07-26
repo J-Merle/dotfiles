@@ -4,3 +4,5 @@ polybar
 feh
 telegram-desktop
 betterlockscreen
+aspell
+aspell-fr
