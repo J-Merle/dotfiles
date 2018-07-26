@@ -11,6 +11,7 @@ exec_always --no-startup-id xcompmgr -c -f -n
 exec_always --no-startup-id numlockx
 # Start a floating temite
 exec --no-startup-id "termite -r termite-float"
+exec --no-startup-id mkdir -p "$HOME/Images/screenshots"
 
 ################################## BINDSYM ###########################################
 set $mod Mod4
@@ -40,12 +41,12 @@ bindsym $mod+Shift+s 	exec "~/.script/power_manager"
 bindsym $mod+t 		exec --no-startup-id telegram-desktop; [class="TelegramDesktop"] scratchpad show;
 bindsym $mod+v 		split v
 bindsym $mod+shift+x 	exec betterlockscreen --lock
-bindsym $mod+x 		exec --no-startup-id import $HOME/Images/screen_$(date +%Y-%m-%d_%H:%M).png
 bindsym $mod+z 		layout tabbed
 
 bindsym $mod+space focus mode_toggle
 bindsym $mod+Shift+space floating toggle
 bindsym $mod+Return exec termite
+bindsym Print --release	exec --no-startup-id import $HOME/Images/screenshots/screen_$(date +%Y-%m-%d_%H:%M:%S).png
 
 # switch to workspace
 bindsym $mod+ampersand workspace 1
