@@ -111,3 +111,7 @@ function wiki() {
 function wallpaper() {
   ln -sf "$(readlink -f $1)" "$HOME/.config/i3/wallpaper" && feh --bg-fill "$HOME/.config/i3/wallpaper"
 }
+
+function lockscreen() {
+  ln -sf "$(readlink -f $1)" "$HOME/.config/i3/lockscreen" && betterlockscreen --update "$HOME/.config/i3/lockscreen" -r 1920x1080
+}

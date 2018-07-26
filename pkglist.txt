@@ -3,3 +3,4 @@ zsh
 polybar
 feh
 telegram-desktop
+betterlockscreen
