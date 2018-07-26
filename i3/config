@@ -12,7 +12,7 @@ exec_always --no-startup-id numlockx
 # Start a floating temite
 exec --no-startup-id "termite -r termite-float"
 
-################################## BINDYM ###########################################
+################################## BINDSYM ###########################################
 set $mod Mod4
 floating_modifier $mod
 
