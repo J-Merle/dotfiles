@@ -6,3 +6,4 @@ telegram-desktop
 betterlockscreen
 aspell
 aspell-fr
+compton

@@ -1,3 +1,5 @@
+################################## GLOBALS     ######################################
+set $browser firefox
 ################################## EXEC ALWAYS ######################################
 # Launcher polybar
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
@@ -12,6 +14,8 @@ exec_always --no-startup-id numlockx
 # Start a floating temite
 exec --no-startup-id "termite -r termite-float"
 exec --no-startup-id mkdir -p "$HOME/Images/screenshots"
+# Start compton
+exec --no-startup-id compton -b
 
 ################################## BINDSYM ###########################################
 set $mod Mod4
@@ -24,7 +28,7 @@ bindsym $mod+d 		exec dmenu_run -b -i
 bindsym $mod+Shift+d 	exec "~/.script/ide_manager"
 bindsym $mod+e 		layout toggle split
 bindsym $mod+f 		fullscreen toggle
-bindsym $mod+Shift+f 	exec --no-startup-id firefox
+bindsym $mod+Shift+f 	exec --no-startup-id $browser
 bindsym $mod+h 		split h
 bindsym $mod+j 		focus left
 bindsym $mod+Shift+j 	move left
@@ -116,9 +120,8 @@ for_window [class=".*"] border pixel 4
 
 for_window [window_role="termite-float"] floating enable
 for_window [window_role="termite-float"] resize set 1366 300
-for_window [window_role="termite-float"] move position 0 468
-for_window [window_role="termite-float"] border none
 for_window [window_role="termite-float"] sticky enable
+for_window [window_role="termite-float"] move position 0 468
 for_window [window_role="termite-float"] move scratchpad
 
 for_window [class="TelegramDesktop"] floating enable
@@ -130,3 +133,7 @@ for_window [class="TelegramDesktop"] border none
 
 for_window [window_role="GtkFileChooserDialog"] resize set 800 600
 for_window [window_role="GtkFileChooserDialog"] move center
+
+for_window [class="^.*"] border pixel 0
+for_window [title="^.*"] border pixel 0
+
