@@ -50,6 +50,8 @@ bindsym $mod+z 		layout tabbed
 bindsym $mod+space focus mode_toggle
 bindsym $mod+Shift+space floating toggle
 bindsym $mod+Return exec termite
+bindsym $mod+Shift+Return exec termite -e ranger
+
 bindsym Print --release	exec --no-startup-id import $HOME/Images/screenshots/screen_$(date +%Y-%m-%d_%H:%M:%S).png
 
 # switch to workspace

@@ -7,3 +7,4 @@ betterlockscreen
 aspell
 aspell-fr
 compton
+ranger
