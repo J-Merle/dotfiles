@@ -103,6 +103,7 @@ alias launch_postgres="sudo systemctl start postgresql"
 alias lll="ls -lah"
 alias pacman="pacman --color always"
 alias aurman="aurman --color always"
+alias lb="lsblk -o NAME,LABEL,SIZE,TYPE,MOUNTPOINT"
 
 function wiki() {
   firefox --search "\!aw $1"
@@ -118,4 +119,12 @@ function lockscreen() {
 
 function spell() {
   echo $1 > /tmp/spell_check.txt && aspell -c /tmp/spell_check.txt && echo "Texte sauvegardé dans /tmp/spell_check.txt" && cat /tmp/spell_check.txt
+}
+
+connect_headphones() {
+    echo "power on" | bluetoothctl
+    sleep 0.5
+    echo "disconnect 00:18:09:6D:64:A5" | bluetoothctl
+    sleep 3
+    echo "connect 00:18:09:6D:64:A5" | bluetoothctl
 }
