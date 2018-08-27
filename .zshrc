@@ -1,0 +1,1 @@
+/home/lycos/.config/zsh/.zshrc

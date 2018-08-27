@@ -3,11 +3,7 @@
 
 # Except
 !.gitignore
-!i3
-!pkglist.txt
-!compton.conf
-!ranger
-!polybar
-
-i3/wallpaper
-i3/lockscreen
+!README.md
+!.zshrc
+!.gitconfig
+!.vimrc
