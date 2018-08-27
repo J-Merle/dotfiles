@@ -1,0 +1,1 @@
+/home/lycos/Repositories/dotfiles/vim/.vimrc
