@@ -1,5 +1,5 @@
 [user]
-	name = J√r√my Merle
+	name = Jeremy Merle
 	email = jeremy.merle@protonmail.com
 [push]
 	default = simple
@@ -10,3 +10,6 @@
 	com = commit -m
 	follow = log --pretty='%Cred%h %Cgreen%cd %Creset%B' --date='short' --follow
 	lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
+	cc = reset --soft HEAD^
+[core]
+	editor = vim

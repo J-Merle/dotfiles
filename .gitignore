@@ -3,14 +3,6 @@
 
 # Except
 !.gitignore
-!i3/config
-!pkglist.txt
-!compton.conf
-!ranger
-!polybar
-!git
-!gtk-3.0
-!termite
-!vim
-!zsh
-!README.md
+!.gitconfig
+!.zshrc
+!.vimrc
