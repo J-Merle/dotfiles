@@ -10,7 +10,7 @@ secondary = #929396
 alert = #bd2c40
 
 [bar/example]
-monitor = ${env:MONITOR:eDP}
+monitor = ${env:MONITOR:HDMI-1}
 width = 100%
 height = 33
 ;offset-x = 1%
@@ -232,7 +232,7 @@ interval = 3.0
 ;format-connected-underline = #55aa55
 format-connected-prefix = " "
 format-connected-prefix-foreground = ${colors.foreground-alt}
-label-connected = %local_ip%
+label-connected =  
 
 format-disconnected =
 ;format-disconnected = <label-disconnected>

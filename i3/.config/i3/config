@@ -1,3 +1,10 @@
+################################## MUST BE CHANGED ##################################
+exec_always --no-startup-id xrandr --output HDMI-1 --primary --left-of DVI-I-1
+set $width 1920
+set $height 1080
+set $term_x 780
+set $telegram_y 1520
+
 ################################## GLOBALS     ######################################
 set $browser firefox
 ################################## EXEC ALWAYS ######################################
@@ -29,6 +36,7 @@ bindsym $mod+Shift+d 	exec "~/.script/ide_manager"
 bindsym $mod+e 		layout toggle split
 bindsym $mod+f 		fullscreen toggle
 bindsym $mod+Shift+f 	exec --no-startup-id $browser
+bindsym $mod+Shift+g 	exec "~/.script/games" 
 bindsym $mod+h 		split h
 bindsym $mod+j 		focus left
 bindsym $mod+Shift+j 	move left
@@ -121,14 +129,14 @@ smart_gaps on
 for_window [class=".*"] border pixel 4
 
 for_window [window_role="termite-float"] floating enable
-for_window [window_role="termite-float"] resize set 1366 300
+for_window [window_role="termite-float"] resize set $width 300
 for_window [window_role="termite-float"] sticky enable
-for_window [window_role="termite-float"] move position 0 468
+for_window [window_role="termite-float"] move position 0 $term_x
 for_window [window_role="termite-float"] move scratchpad
 
 for_window [class="TelegramDesktop"] floating enable
 for_window [class="TelegramDesktop"] resize set 300 730
-for_window [class="TelegramDesktop"] move position 980 32
+for_window [class="TelegramDesktop"] move position $telegram_y 32
 for_window [class="TelegramDesktop"] move scratchpad
 for_window [class="TelegramDesktop"] sticky enable
 for_window [class="TelegramDesktop"] border none
