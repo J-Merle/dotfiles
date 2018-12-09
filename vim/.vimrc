@@ -1,11 +1,23 @@
 execute pathogen#infect()
 
-set nu
+" Line numbers
+set number relativenumber
+set numberwidth=4
+highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey
+highlight LineRnr term=bold cterm=NONE ctermfg=DarkGrey
+
+
 filetype indent plugin on
 set ts=2 sw=2 et
 
+" Searching
+set ignorecase
+set smartcase
+set incsearch
+
+map <F1> :setlocal spell! spelllang=en_us<CR>
 " ########## Syntastic #####################
-map z :w<Enter>
+"map z :w<Enter>
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
