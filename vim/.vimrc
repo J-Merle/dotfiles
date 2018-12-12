@@ -11,7 +11,7 @@ nmap <leader>q :q!<cr>
 inoremap <Space><Tab> <Esc>/<++><Enter>"_c4l
 
 " Python
-autocmd Filetype py inoremap ,def def (<++>):<Esc>F(i
+autocmd FileType python inoremap ,def def (<++>):<Esc>F(i
 
 " Line numbers
 set number relativenumber
