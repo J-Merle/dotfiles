@@ -3,6 +3,7 @@ execute pathogen#infect()
 let mapleader = ","
 set encoding=utf8
 
+colorscheme lycos
 
 " Leader shortucts
 nmap <leader>f :w!<cr>
@@ -12,13 +13,17 @@ inoremap <Space><Tab> <Esc>/<++><Enter>"_c4l
 
 " Python
 autocmd FileType python inoremap ,def def (<++>):<Esc>F(i
+autocmd FileType python inoremap __ ____<Esc>hi
+
+" Markedown
+autocmd FileType markdown inoremap ,h1 # 
+autocmd FileType markdown inoremap ,h2 ##
+autocmd FileType markdown inoremap ,h3 ###
+
 
 " Line numbers
 set number relativenumber
 set numberwidth=4
-highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey
-highlight LineRnr term=bold cterm=NONE ctermfg=DarkGrey
-
 
 filetype indent plugin on
 set ts=2 sw=2 et
