@@ -5,7 +5,7 @@ set encoding=utf8
 
 colorscheme lycos
 
-" Leader shortucts
+" Leader shortcuts
 nmap <leader>f :w!<cr>
 nmap <leader>q :q!<cr>
 
@@ -51,7 +51,7 @@ set foldcolumn=2
 highlight FoldColumn ctermbg=None
 highlight Folded ctermbg=None
 
-" Automatic surronding completion
+" Automatic surrounding completion
 inoremap ( ()<Esc>i
 inoremap " ""<Esc>i
 inoremap ' ''<Esc>i
