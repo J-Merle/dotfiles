@@ -14,6 +14,8 @@ inoremap <Space><Tab> <Esc>/<++><Enter>"_c4l
 " Python
 autocmd FileType python inoremap ,def def (<++>):<Esc>F(i
 autocmd FileType python inoremap __ ____<Esc>hi
+autocmd FileType python inoremap ,from from  import <++><Esc>Fihi
+autocmd FileType python inoremap ,main if __name__ == '__main__':<Esc>o
 
 " Markedown
 autocmd FileType markdown inoremap ,h1 # 
