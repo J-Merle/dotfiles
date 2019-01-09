@@ -47,7 +47,6 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_loc_list_height = 5
 let g:syntastic_check_on_wq = 0
 
-
 " Folding
 set foldcolumn=2
 highlight FoldColumn ctermbg=None
@@ -59,3 +58,7 @@ inoremap " ""<Esc>i
 inoremap ' ''<Esc>i
 inoremap { {}<Esc>i
 inoremap [ []<Esc>i
+
+let b:ale_linters = ['flake8']
+let b:ale_fixers = {'python': ['trim_whitespace', 'remove_trailing_lines', 'isort', 'black']}
+let g:ale_fix_on_save = 1
