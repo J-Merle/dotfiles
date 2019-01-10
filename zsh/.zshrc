@@ -104,6 +104,7 @@ alias lll="ls -lah"
 alias pacman="pacman --color always"
 alias aurman="aurman --color always"
 alias lb="lsblk -o NAME,LABEL,SIZE,TYPE,MOUNTPOINT"
+alias tree="tree -I '__pycache__|venv|lib|htmlcov'"
 
 function wiki() {
   firefox --search "\!aw $1"
