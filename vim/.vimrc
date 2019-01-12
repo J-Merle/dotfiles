@@ -1,64 +1,65 @@
 execute pathogen#infect()
-
-let mapleader = ","
 set encoding=utf8
-
+syntax on
 colorscheme lycos
+filetype indent plugin on
 
-" Leader shortcuts
+" GENERAL
+" Shortcuts
+let mapleader=","
 nmap <leader>f :w!<cr>
 nmap <leader>q :q!<cr>
-
 inoremap <Space><Tab> <Esc>/<++><Enter>"_c4l
+map <F1> :setlocal spell! spelllang=en_us<CR>
+" Automatic surrounding completion
+inoremap ( ()<Esc>i
+inoremap { {}<Esc>i
+inoremap [ []<Esc>i
+" Columns
+set rnu nonu
+set numberwidth=3
+set signcolumn=yes
+" Lines
+set scrolloff=7
+set ts=2 sw=2 et
+" Searching
+set ignorecase
+set smartcase
+set incsearch
+" Folding
+" Size of the folding column
+set foldcolumn=1
+" Save folding and restore it when loading file
+augroup remember_folds
+  autocmd!
+  autocmd BufWinLeave * mkview
+  autocmd BufWinEnter * silent! loadview
+augroup END
 
+" PLUGINS
+" NERDtree
+" Open NerdTree with F5
+map <F5> :NERDTree<CR>
+" Close vim if NERDTree is the last window opened
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+" Nerdtree ignore trash folders
+let g:NERDTreeIgnore=['__pycache__', 'htmlcov', 'venv']
+" Open NERDtree on the right
+let g:NERDTreeWinPos = "right"
+" Ale
+let b:ale_linters = ['flake8']
+let b:ale_fixers = {'python': ['trim_whitespace', 'remove_trailing_lines', 'isort', 'black']}
+let g:ale_fix_on_save = 1
+
+" FILETYPES
 " Python
 autocmd FileType python inoremap ,def def (<++>):<Esc>F(i
 autocmd FileType python inoremap __ ____<Esc>hi
 autocmd FileType python inoremap ,from from  import <++><Esc>Fihi
 autocmd FileType python inoremap ,main if __name__ == '__main__':<Esc>o
-
+autocmd FileType python inoremap " ""<Esc>i
+autocmd FileType python inoremap ' ''<Esc>i
 " Markedown
-autocmd FileType markdown inoremap ,h1 # 
+autocmd FileType markdown inoremap ,h1 #
 autocmd FileType markdown inoremap ,h2 ##
 autocmd FileType markdown inoremap ,h3 ###
-
-
-" Line numbers
-set number relativenumber
-set numberwidth=4
-
-filetype indent plugin on
-set ts=2 sw=2 et
-
-" Searching
-set ignorecase
-set smartcase
-set incsearch
-
-map <F1> :setlocal spell! spelllang=en_us<CR>
-
-" Syntastic"
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-syntax on
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_loc_list_height = 5
-let g:syntastic_check_on_wq = 0
-
-" Folding
-set foldcolumn=2
-highlight FoldColumn ctermbg=None
-highlight Folded ctermbg=None
-
-" Automatic surrounding completion
-inoremap ( ()<Esc>i
-inoremap " ""<Esc>i
-inoremap ' ''<Esc>i
-inoremap { {}<Esc>i
-inoremap [ []<Esc>i
-
-let b:ale_linters = ['flake8']
-let b:ale_fixers = {'python': ['trim_whitespace', 'remove_trailing_lines', 'isort', 'black']}
-let g:ale_fix_on_save = 1
