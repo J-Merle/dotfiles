@@ -51,3 +51,8 @@ let b:ale_linters = ['flake8']
 let b:ale_fixers = {'python': ['trim_whitespace', 'remove_trailing_lines', 'isort', 'black']}
 let g:ale_fix_on_save = 1
 
+" Disable arrow keys because .... you know we don't need this stuff !
+noremap <Down> <nop>
+noremap <Left> <nop>
+noremap <Up> <nop>
+noremap <Right> <nop>
