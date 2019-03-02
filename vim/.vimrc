@@ -51,8 +51,3 @@ let b:ale_linters = ['flake8']
 let b:ale_fixers = {'python': ['trim_whitespace', 'remove_trailing_lines', 'isort', 'black']}
 let g:ale_fix_on_save = 1
 
-" FILETYPES
-" Markedown
-autocmd FileType markdown inoremap ,h1 #
-autocmd FileType markdown inoremap ,h2 ##
-autocmd FileType markdown inoremap ,h3 ###
