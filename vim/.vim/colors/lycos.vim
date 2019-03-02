@@ -18,14 +18,3 @@ highlight PmenuThumb ctermbg=black
 highlight FoldColumn ctermbg=None
 highlight Folded ctermbg=None
 
-"  Python
-highlight pythonDecoratorName ctermfg=DarkGrey cterm=bold
-highlight pythonDecorator ctermfg=DarkGrey cterm=bold
-highlight pythonStatement ctermfg=yellow
-highlight pythonComment ctermfg=DarkGrey
-highlight pythonInclude ctermfg=red
-highlight pythonString ctermfg=grey
-highlight pythonRawString ctermfg=grey
-highlight pythonQuotes ctermfg=grey
-highlight pythonTripleQuotes ctermfg=blue
-

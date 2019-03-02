@@ -52,13 +52,6 @@ let b:ale_fixers = {'python': ['trim_whitespace', 'remove_trailing_lines', 'isor
 let g:ale_fix_on_save = 1
 
 " FILETYPES
-" Python
-autocmd FileType python inoremap ,def def (<++>):<Esc>F(i
-autocmd FileType python inoremap __ ____<Esc>hi
-autocmd FileType python inoremap ,from from  import <++><Esc>Fihi
-autocmd FileType python inoremap ,main if __name__ == '__main__':<Esc>o
-autocmd FileType python inoremap " ""<Esc>i
-autocmd FileType python inoremap ' ''<Esc>i
 " Markedown
 autocmd FileType markdown inoremap ,h1 #
 autocmd FileType markdown inoremap ,h2 ##
