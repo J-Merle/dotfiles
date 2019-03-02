@@ -140,6 +140,8 @@ for_window [class="TelegramDesktop"] move position $telegram_y 32
 for_window [class="TelegramDesktop"] move scratchpad
 for_window [class="TelegramDesktop"] sticky enable
 for_window [class="TelegramDesktop"] border none
+for_window [class="TelegramDesktop" title="Media viewer"] focus
+for_window [class="TelegramDesktop" title="Media viewer"] fullscreen
 
 for_window [window_role="GtkFileChooserDialog"] resize set 800 600
 for_window [window_role="GtkFileChooserDialog"] move center
