@@ -1,2 +1,2 @@
 killall polybar
-polybar example
+polybar lycosbar

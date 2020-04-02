@@ -9,6 +9,7 @@ filetype indent plugin on
 let mapleader=","
 nmap <leader>f :w!<cr>
 nmap <leader>q :q!<cr>
+nmap <F12> :registers<cr>
 inoremap <Space><Tab> <Esc>/<++><Enter>"_c4l
 map <F1> :setlocal spell! spelllang=en_us<CR>
 " Automatic surrounding completion

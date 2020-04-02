@@ -104,23 +104,16 @@ alias lll="ls -lah"
 alias pacman="pacman --color always"
 alias aurman="aurman --color always"
 alias lb="lsblk -o NAME,LABEL,SIZE,TYPE,MOUNTPOINT"
-alias tree="tree -I '__pycache__|venv|lib|htmlcov'"
+alias tree="tree -I '__pycache__|venv|lib|htmlcov|.git'"
 alias pytest="pytest -v --disable-warnings"
+alias open="xdg-open"
 
 function wiki() {
   firefox --search "\!aw $1"
 }
 
-function wallpaper() {
-  ln -sf "$(readlink -f $1)" "$HOME/.config/i3/wallpaper" && feh --bg-fill "$HOME/.config/i3/wallpaper"
-}
-
 function lockscreen() {
   ln -sf "$(readlink -f $1)" "$HOME/.config/i3/lockscreen" && betterlockscreen --update "$HOME/.config/i3/lockscreen" -r 1920x1080
-}
-
-function spell() {
-  echo $1 > /tmp/spell_check.txt && aspell -c /tmp/spell_check.txt && echo "Texte sauvegardé dans /tmp/spell_check.txt" && cat /tmp/spell_check.txt
 }
 
 connect_headphones() {

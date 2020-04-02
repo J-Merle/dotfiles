@@ -1,5 +1,4 @@
 ################################## MUST BE CHANGED ##################################
-exec_always --no-startup-id xrandr --output HDMI-1 --primary --left-of DVI-I-1
 set $width 1920
 set $height 1080
 set $term_x 780
@@ -22,7 +21,7 @@ exec_always --no-startup-id numlockx
 exec --no-startup-id "termite -r termite-float"
 exec --no-startup-id mkdir -p "$HOME/Images/screenshots"
 # Start compton
-exec --no-startup-id compton -b
+#exec --no-startup-id compton -b
 
 ################################## BINDSYM ###########################################
 set $mod Mod4
@@ -36,7 +35,7 @@ bindsym $mod+Shift+d 	exec "~/.script/ide_manager"
 bindsym $mod+e 		layout toggle split
 bindsym $mod+f 		fullscreen toggle
 bindsym $mod+Shift+f 	exec --no-startup-id $browser
-bindsym $mod+Shift+g 	exec "~/.script/games" 
+bindsym $mod+Shift+g 	exec "games" 
 bindsym $mod+h 		split h
 bindsym $mod+j 		focus left
 bindsym $mod+Shift+j 	move left
@@ -49,7 +48,7 @@ bindsym $mod+Shift+m 	move right
 bindsym $mod+r 		mode "resize"
 bindsym $mod+Shift+r 	restart
 bindsym $mod+s 		layout stacking
-bindsym $mod+Shift+s 	exec "~/.script/power_manager"
+bindsym $mod+Shift+s 	exec "~/.local/bin/power_manager"
 bindsym $mod+t 		exec --no-startup-id telegram-desktop; [class="TelegramDesktop"] scratchpad show;
 bindsym $mod+v 		split v
 bindsym $mod+shift+x 	exec betterlockscreen --lock
@@ -119,11 +118,14 @@ mode "resize" {
 }
 
 ################################## WINDOW DISPLAY ###########################################
+
 hide_edge_borders both
 font pango:monospace 8
+client.focused          #2F3138 #2F3138 #ffffff #2e9ef4   #285577
+client.focused_inactive #333333 #5f676a #ffffff #484e50   #5f676a
 
 # Gaps
-gaps inner 12
+gaps inner 8
 smart_gaps on
 
 for_window [class=".*"] border pixel 4
@@ -145,6 +147,8 @@ for_window [class="TelegramDesktop" title="Media viewer"] fullscreen
 
 for_window [window_role="GtkFileChooserDialog"] resize set 800 600
 for_window [window_role="GtkFileChooserDialog"] move center
+
+for_window [class="Pavucontrol"] floating enable
 
 for_window [class="^.*"] border pixel 0
 for_window [title="^.*"] border pixel 0
