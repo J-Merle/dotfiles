@@ -1,20 +1,20 @@
 execute pathogen#infect()
+set nocompatible
 set encoding=utf8
-syntax on
+syntax enable
 colorscheme lycos
 filetype indent plugin on
+set path+=**
+set wildignore+=*.o,*.d
+set wildmenu
 
 " GENERAL
 " Shortcuts
 let mapleader=","
 nmap <leader>f :w!<cr>
-nmap <F12> :registers<cr>
-inoremap <leader><Tab> <Esc>/<++><Enter>"_c4l
 map <F1> :setlocal spell! spelllang=en_us<CR>
-" Automatic surrounding completion
-inoremap ( ()<Esc>i
-inoremap { {}<Esc>i
-inoremap [ []<Esc>i
+nnoremap <F12> :registers<cr>
+inoremap <leader><Tab> <Esc>/<++><Enter>"_c4l
 " Columns
 set rnu nonu
 set numberwidth=3
@@ -26,15 +26,10 @@ set ts=2 sw=2 et
 set ignorecase
 set smartcase
 set incsearch
+set hlsearch
 " Folding
 " Size of the folding column
 set foldcolumn=1
-" Save folding and restore it when loading file
-augroup remember_folds
-  autocmd!
-  autocmd BufWinLeave * mkview
-  autocmd BufWinEnter * silent! loadview
-augroup END
 
 " PLUGINS
 " NERDtree
