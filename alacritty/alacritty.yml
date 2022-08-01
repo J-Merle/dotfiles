@@ -1,0 +1,24 @@
+font:
+  normal:
+    family: Inconsolata
+    style: Regular
+
+  bold:
+    family: Inconsolata
+    style: Gras
+
+  italic:
+    family: Inconsolata
+    style: Italique
+
+  bold_italic:
+    family: Inconsolata
+    style: Gras Italique
+
+  size: 12
+
+window:
+  padding:
+    x: 15
+    y: 12
+
