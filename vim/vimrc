@@ -1,0 +1,24 @@
+set runtimepath-=~/.vim
+set runtimepath^=$XDG_CONFIG_HOME/vim
+set viminfofile^=$XDG_CONFIG_HOME/vim/viminfo
+
+execute pathogen#infect()
+
+syntax on
+filetype plugin indent on
+
+set wildoptions+=fuzzy
+
+let mapleader = ","
+let maplocalleader = ";"
+
+" Open vimrc
+nnoremap <leader>ev :vsplit $MYVIMRC<cr>
+" Source vimrc
+nnoremap <leader>sv :source $MYVIMRC<cr>
+noremap <leader>f :w<cr>
+noremap <space><tab> /<++><cr>v3l
+
+inoremap jk <esc>
+inoremap <esc> <nop>
+inoremap <c-c> <nop>
