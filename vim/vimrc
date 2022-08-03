@@ -9,6 +9,10 @@ filetype plugin indent on
 
 set wildmenu
 set wildoptions+=pum
+set hlsearch
+set incsearch
+highlight search term=standout ctermfg=0 ctermbg=11 guifg=Black guibg=Yellow
+highlight incsearch term=standout ctermfg=0 ctermbg=11 guifg=Black guibg=Yellow
 
 let mapleader = ","
 let maplocalleader = ";"
