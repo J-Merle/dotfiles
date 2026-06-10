@@ -20,10 +20,12 @@ zstyle :compinstall filename '/home/lycos/.zshrc'
 zstyle ':vcs_info:*' enable git
 zstyle ':vcs_info:*' check-for-changes true
 zstyle ':vcs_info:git:*' use-simple false
-zstyle ':vcs_info:git:*' formats ' %F{red}{%b}%F{yellow}%u%c%f'
-zstyle ':vcs_info:git:*' actionformats ' %F{red}{%b}[%a]%F{yellow}%u%c%f'
-zstyle ':vcs_info:git:*' unstagedstr ' ✱'
-zstyle ':vcs_info:git:*' stagedstr ' ✔'
+zstyle ':vcs_info:git:*' formats ' %F{red}{%b}%F{yellow}%u%f'
+zstyle ':vcs_info:git:*' actionformats ' %F{red}{%b}[%a]%F{yellow}%u%f'
+zstyle ':vcs_info:git:*' unstagedstr '✱'
+
+zstyle ':completion:*' menu select
+zstyle ':completion:*' matcher-list '' 'm:{a-z}={A-Z}' 'l:|=* r:|=*'
 
 autoload -Uz compinit vcs_info
 compinit
