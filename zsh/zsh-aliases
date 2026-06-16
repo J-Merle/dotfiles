@@ -1,0 +1,8 @@
+
+alias ls="ls --color"
+alias ll="ls -lAh"
+alias dll="docker container list --format \"table {{.ID}} {{.Image}}\t\t {{.State}} {{.Ports}}\""
+
+# Tmux
+alias t="tmux"
+alias ta="tmux attach-session -t"

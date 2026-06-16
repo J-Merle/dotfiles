@@ -1,4 +1,7 @@
-# Lines configured by zsh-newuser-install
+export MANPAGER="less -R --use-color -Dd+r -Du+b"
+export XDG_CONFIG_HOME="$HOME/.config"
+export XDG_DATA_HOME="$HOME/.local/share"
+
 export HISTFILE="$HOME/.config/zsh/histfile"
 export HISTSIZE=1000000000
 export SAVEHIST=1000000000
@@ -29,6 +32,8 @@ zstyle ':completion:*' matcher-list '' 'm:{a-z}={A-Z}' 'l:|=* r:|=*'
 
 autoload -Uz compinit vcs_info
 compinit
+
+
 # End of lines added by compinstall
 setopt PROMPT_SUBST
 precmd () { vcs_info }
@@ -36,13 +41,6 @@ precmd () { vcs_info }
 # Custom
 PS1='%F{blue}🠶 %F{cyan}%1d${vcs_info_msg_0_} %f'
 
-export MANPAGER="less -R --use-color -Dd+r -Du+b"
-export XDG_CONFIG_HOME="$HOME/.config"
-export XDG_DATA_HOME="$HOME/.local/share"
 
-d='.config/dircolors'
-test -r $d && eval "$(dircolors $d)"
-
-alias ls="ls --color"
-alias ll="ls -lAh"
-alias vv="source .venv/bin/activate"
+[ -e $XDG_CONFIG_HOME/zsh/zsh-aliases ] && source $XDG_CONFIG_HOME/zsh/zsh-aliases
+[ -e $XDG_CONFIG_HOME/zsh/zsh-work ] && source $XDG_CONFIG_HOME/zsh/zsh-work
