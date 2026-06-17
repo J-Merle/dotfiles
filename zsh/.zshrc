@@ -15,8 +15,7 @@ setopt SHARE_HISTORY         # share history across terminals in real time
 setopt nomatch
 unsetopt autocd beep extendedglob notify
 bindkey -e
-# End of lines configured by zsh-newuser-install
-# The following lines were added by compinstall
+
 zstyle :compinstall filename '/home/lycos/.zshrc'
 
 # Git
@@ -41,6 +40,12 @@ precmd () { vcs_info }
 # Custom
 PS1='%F{blue}🠶 %F{cyan}%1d${vcs_info_msg_0_} %f'
 
+# Bindkeys
+bindkey -s '^g' 'git commit -m ""^b'
+bindkey -s '^u' 'sudo !!\t'
 
+# Aliases
 [ -e $XDG_CONFIG_HOME/zsh/zsh-aliases ] && source $XDG_CONFIG_HOME/zsh/zsh-aliases
-[ -e $XDG_CONFIG_HOME/zsh/zsh-work ] && source $XDG_CONFIG_HOME/zsh/zsh-work
+[ -e $XDG_CONFIG_HOME/zsh/zsh-aliases-hidden ] && source $XDG_CONFIG_HOME/zsh/zsh-aliases-hidden
+
+
